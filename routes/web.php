@@ -3,6 +3,7 @@
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MonthController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -35,14 +36,19 @@ use Illuminate\Support\Facades\Route;
 // });
 
 //loop statements
-Route::get('/', function () {
+// Route::get('/', function () {
+//     $author = ['A','b','c','d'];
+//     $authors = [['name'=>'kiruba'],['name'=>'Raja'],['name'=>'Vijay']];
+
+//     return view('basic.loop',compact('author','authors'));
+// });
 
 
-    $author = ['A','b','c','d'];
-    $authors = [['name'=>'kiruba'],['name'=>'Raja'],['name'=>'Vijay']];
+// normal db
 
-    return view('basic.loop',compact('author','authors'));
-});
+Route::view('reg',"layouts.default");
+
+Route::post('/create', [RegisterController::class,'create']);
 
 
 

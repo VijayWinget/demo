@@ -93,9 +93,25 @@
     @include('layouts.includes.header')
 
     @section('main-content')
-    <div>
-        <h2>This is the Default</h2>
-    </div>
+   <main>
+            <h2>Register Employee</h2>
+            <form  method="post" action='{{ url('create') }}'  >
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="department">Department:</label>
+                <select id="department" name="department">
+                    <option value="hr">HR</option>
+                    <option value="it">IT</option>
+                    <option value="finance">Finance</option>
+                </select>
+                <input type="submit" value="Register">
+            </form>
+            <p>Thank you for using our employee registration form. Once you submit the form, the employee information will be recorded in our database. If you have any questions, please don't hesitate to <a href="#">contact us</a>.</p>
+        </main>
     @show
 
 
