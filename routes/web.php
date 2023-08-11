@@ -20,11 +20,29 @@ use Illuminate\Support\Facades\Route;
 
 // blade template creation
 // Route::view('layout',"layouts.default");
-Route::view('/','home');
-Route::view('/contact','contact');
+// Route::view('/','home');
+// Route::view('/contact','contact');
 
 
+// conditional statments
+// Route::get('/', function () {
+//     // $heading ="Wellcm to the home screen";
+//     $heading ="<h2>Wellcm to the home screen</h2>";
+//     $noOfUser=5;
+//     $isOnline=1;
+//     $settings="user settings";
+//     return view('home',compact('heading','noOfUser','isOnline','settings'));
+// });
 
+//loop statements
+Route::get('/', function () {
+
+
+    $author = ['A','b','c','d'];
+    $authors = [['name'=>'kiruba'],['name'=>'Raja'],['name'=>'Vijay']];
+
+    return view('basic.loop',compact('author','authors'));
+});
 
 
 
