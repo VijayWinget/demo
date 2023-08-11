@@ -17,7 +17,36 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+
+// blade template creation
+// Route::view('layout',"layouts.default");
+Route::view('/','home');
+Route::view('/contact','contact');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  below basics
+Route::get('/heool', function () {
     return view('welcome');
 });
 
